@@ -24,20 +24,32 @@ int main()
     cout << endl;
 
     // Erase
-    list<int> li{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14};
-    list<int>::iterator it, it2;
-    it = li.begin();
-    it2 = li.begin();
-    advance(it2, 10);
-    li.erase(it, it2);
-    for (auto x : li)
+    list<int> li2{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14};
+    list<int>::iterator it1, it2;
+    it1 = li2.begin();
+    it2 = li2.begin();
+    advance(it1, 3);
+    advance(it2, 9);
+    li.erase(it1, it2);
+    for (auto x : li2)
     {
         cout << x << " ";
     }
+    cout << endl;
 
     // Remove
- 
+    li2.remove(10); // Remove the all specific value
+    for (auto x : li2)
+    {
+        cout << x << " ";
+    }
+    cout << endl;
 
+    // Reverse
+    li.reverse();
+    for (auto x : li)
+        cout << x << " ";
+    cout << endl;
 
     return 0;
 }
