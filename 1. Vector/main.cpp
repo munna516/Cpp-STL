@@ -121,6 +121,12 @@ int main()
         cout << x << " ";
     cout << endl;
 
+    // Delete a specific value in Vector
+    vector<int> v = {1, 3, 5, 7, 3, 3, 15, 20, 3, 27, 30, 3, 36, 3};
+    v.erase(remove(v.begin(), v.end(), 3), v.end());
+    for (auto a : v)
+        cout << a << " ";
+        
     // Swapping Two Vector
     swap(v1, v2);
     for (int x : v1)
@@ -134,5 +140,6 @@ int main()
     cout << v4.size() << endl;
     v4.clear();
     cout << v4.size() << endl;
+
     return 0;
 }
